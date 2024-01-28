@@ -1,0 +1,28 @@
+/* Home.css */
+
+/* Define the overall layout */
+.columns-container {
+    display: flex;
+  }
+  
+  /* Style for the left column */
+  .left-column {
+    width: 50%;
+    padding: 20px;
+    border-right: 2px solid #ddd; /* Beautiful border style */
+  }
+  
+  /* Style for the right column */
+  .right-column {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  /* Common style for both columns */
+  .column-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add any additional styling as needed */
+  
