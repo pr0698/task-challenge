@@ -126,6 +126,10 @@ const Task = ({ task, tasks, setTasks }) => {
     toast("task removed");
   };
 
+  const handleEdit = (id) => {
+    
+  }
+
   const [display, setDisplay] = useState(false);
   const showButton = (e) => {
     e.preventDefault();
@@ -137,13 +141,15 @@ const Task = ({ task, tasks, setTasks }) => {
     setDisplay(false);
   };
 
+  
+
   const styles = {
     editButton: {
-        bottom: '17px',
-        right: '20%',
+      bottom: "17px",
+      right: "20%",
     },
     deleteButton: {
-        bottom: "14px",    
+      bottom: "14px",
     },
   };
 
@@ -156,11 +162,14 @@ const Task = ({ task, tasks, setTasks }) => {
       onMouseEnter={(e) => showButton(e)}
       onMouseLeave={(e) => hideButton(e)}
     >
-
       <p>{task?.name}</p>
       {display && (
         <div>
-          <button className="absolute bottom-1 right-1 text-slate-400" style={styles.editButton}>
+          <button
+            className="absolute bottom-1 right-1 text-slate-400"
+            onClick={() => handleEdit(task?.id)}
+            style={styles.editButton}
+          >
             <svg
               width="20"
               height="20"
